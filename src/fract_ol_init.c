@@ -6,7 +6,7 @@
 /*   By: doriani <doriani@student.42roma.it>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/09 11:42:07 by doriani           #+#    #+#             */
-/*   Updated: 2023/06/09 20:21:00 by doriani          ###   ########.fr       */
+/*   Updated: 2023/06/10 09:36:08 by doriani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,6 +87,9 @@ static void	init_definition(t_fractal *f, char definition)
 
 void	init_fractal(t_fractal *f, char **argv)
 {
+	f->image = NULL;
+	f->display.mlx = NULL;
+	f->display.win = NULL;
 	init_type(f, argv);
 	init_size(f, argv[2][0]);
 	init_quality(f, argv[3][0]);
